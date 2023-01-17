@@ -6,11 +6,10 @@
 //
 
 import UIKit
-
 let imageCache = NSCache<AnyObject, AnyObject>()
 
-final class CustomImageView: UIImageView {
-    
+extension UIImageView {
+
     func loadImage(form url: URL) {
         
         if let imageFromCache = imageCache.object(forKey: url.absoluteString as AnyObject) as? UIImage {

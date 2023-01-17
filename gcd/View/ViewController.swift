@@ -9,23 +9,24 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    var imagesArray: [Image] = []
     
+  var viewModel = ViewModel()
+   
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let img = Image(image: "")
-        imagesArray = img.makeImages()
+        viewModel.imagesArray = viewModel.getImages()
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
 }
 
 // MARK: - Delegate, DataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath)
-        let image = imagesArray[indexPath.row]
+        let image = viewModel.getImageByIndex(index: indexPath.row)
         
         guard let imageCell = cell as? TableViewCell else {
             return cell
@@ -38,8 +39,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return imagesArray.count
+        return viewModel.numberOrRows()
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
     }
