@@ -18,24 +18,27 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OQr-IL-f7l">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reusableCell" rowHeight="164" id="rL4-FG-9O6" customClass="TableViewCell" customModule="gcd" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="164"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reusableCell" rowHeight="250" id="rL4-FG-9O6" customClass="TableViewCell" customModule="gcd" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rL4-FG-9O6" id="fxp-TT-8DL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wo4-i6-ukV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wo4-i6-ukV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="250" id="84D-HX-wbo"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Wo4-i6-ukV" secondAttribute="bottom" id="4L7-d6-XlG"/>
-                                                <constraint firstAttribute="trailing" secondItem="Wo4-i6-ukV" secondAttribute="trailing" id="7FA-22-yiu"/>
-                                                <constraint firstItem="Wo4-i6-ukV" firstAttribute="leading" secondItem="fxp-TT-8DL" secondAttribute="leading" id="Nyt-OB-h7x"/>
-                                                <constraint firstItem="Wo4-i6-ukV" firstAttribute="top" secondItem="fxp-TT-8DL" secondAttribute="top" id="reT-FI-kfB"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wo4-i6-ukV" secondAttribute="bottom" id="Uhh-dI-8aE"/>
+                                                <constraint firstItem="Wo4-i6-ukV" firstAttribute="top" secondItem="fxp-TT-8DL" secondAttribute="top" id="VMI-1Y-rPV"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wo4-i6-ukV" secondAttribute="trailing" id="dNo-U6-wE2"/>
+                                                <constraint firstItem="Wo4-i6-ukV" firstAttribute="leading" secondItem="fxp-TT-8DL" secondAttribute="leading" id="kRS-P7-jxY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -46,7 +49,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OQr-IL-f7l" secondAttribute="bottom" id="Rni-sF-GMR"/>
                             <constraint firstItem="OQr-IL-f7l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tty-09-sZy"/>
@@ -64,8 +67,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

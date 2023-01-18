@@ -18,6 +18,8 @@ final class ViewController: UIViewController {
         viewModel.imagesArray = viewModel.getImages()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.estimatedRowHeight = 250
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
 }
@@ -42,9 +44,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return viewModel.numberOrRows()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
-    }
 }
 
 

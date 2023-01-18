@@ -12,14 +12,18 @@ protocol ViewModelProtocol {
     func getImages() -> [Image]
     func getImageByIndex(index: Int) -> Image
     func numberOrRows() -> Int
+
+  
 }
 
 class ViewModel: ViewModelProtocol{
     
     var imagesArray: [Image] = []
-   
+    var cache = ImageCache()
+    let img = Image(image: "")
+
+    
     func getImages() -> [Image] {
-        let img = Image(image: "")
         imagesArray = img.makeImages()
         return imagesArray
     }
