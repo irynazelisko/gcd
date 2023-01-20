@@ -9,9 +9,8 @@ import UIKit
 
 final class ViewController: UIViewController {
     
+    var viewModel = ViewModel()
     
-  var viewModel = ViewModel()
-   
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +32,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let imageCell = cell as? TableViewCell else {
             return cell
         }
-        
         if let url = URL(string: image.image) {
             imageCell.imgView.loadImage(form: url)
         }
-        
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -18,7 +18,7 @@ extension UIImageView {
     func image(forKey key: String) -> UIImage? {
         return UIImageView.imageCache.image(forKey: key)
     }
-    
+
     func loadImage(form url: URL) {
         if let imageFromCache = image(forKey: url.absoluteString) {
             self.image = imageFromCache
