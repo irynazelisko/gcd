@@ -31,12 +31,8 @@ var array = [
     "https://cdn.pixabay.com/photo/2014/10/05/06/05/rapeseeds-474558_1280.jpg"
 ]
 
-struct Image {
-    var image: String
-    init(image:String){
-        self.image = image
-    }
-    
+
+struct ImageManager {
     func makeImages() -> [Image] {
         var images = [Image]()
         for img in array {
@@ -44,5 +40,12 @@ struct Image {
         }
         return images
     }
-    
 }
+
+struct Image {
+    var image: String
+    init(image:String){
+        self.image = image
+    }
+}
+
