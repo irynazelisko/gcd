@@ -10,7 +10,8 @@ import UIKit
 final class ViewController: UIViewController {
     
     var viewModel = ViewModel()
-    
+   
+
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,24 +28,23 @@ final class ViewController: UIViewController {
 // MARK: - Delegate, DataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath)
         let image = viewModel.getImageByIndex(index: indexPath.row)
         
         guard let imageCell = cell as? TableViewCell else {
             return cell
         }
         
-        if let url = URL(string: image.image) {
-            imageCell.imgView.loadImage(form: url)
-        }
-        
-        return cell
+        let tableCellViewModel = TableCellViewModel(imagePath: image.image)
+        imageCell.viewModel = tableCellViewModel
+       
+        return imageCell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOrRows()
         
     }
-
+   
 }
 
 

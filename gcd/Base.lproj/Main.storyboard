@@ -42,7 +42,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="heightConstraint" destination="84D-HX-wbo" id="ypT-fD-zyh"/>
+                                            <outlet property="heightConstraint" destination="84D-HX-wbo" id="uVb-sY-0fs"/>
                                             <outlet property="imgView" destination="Wo4-i6-ukV" id="oMx-Ny-7eN"/>
                                         </connections>
                                     </tableViewCell>
