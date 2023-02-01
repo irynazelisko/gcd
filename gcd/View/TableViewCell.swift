@@ -17,6 +17,7 @@ final class TableViewCell: UITableViewCell {
             setUpUI()
         }
     }
+   
     
     func setUpUI() {
         viewModel?.loadImage { [weak self] image in
@@ -42,3 +43,7 @@ final class TableViewCell: UITableViewCell {
     
   
 }
+
+
+
+

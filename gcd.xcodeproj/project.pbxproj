@@ -20,6 +20,7 @@
 		828F1AA12976FF430011A4DE /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F1AA02976FF420011A4DE /* ImageCache.swift */; };
 		828F1AA4298171E10011A4DE /* TableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F1AA3298171E10011A4DE /* TableCellViewModel.swift */; };
 		828F1AA62981D6530011A4DE /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F1AA52981D6520011A4DE /* ImageHelper.swift */; };
+		829E0125298A4F4000848F7C /* ImagePropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829E0124298A4F4000848F7C /* ImagePropertyWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		828F1AA02976FF420011A4DE /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		828F1AA3298171E10011A4DE /* TableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellViewModel.swift; sourceTree = "<group>"; };
 		828F1AA52981D6520011A4DE /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		829E0124298A4F4000848F7C /* ImagePropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePropertyWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				828F1A99297066920011A4DE /* Model */,
 				828F1A98297066630011A4DE /* View */,
 				828F1A93296F68AB0011A4DE /* ViewModel */,
+				829E0124298A4F4000848F7C /* ImagePropertyWrapper.swift */,
 				828F1A83296F687F0011A4DE /* Main.storyboard */,
 				828F1A86296F68810011A4DE /* Assets.xcassets */,
 				828F1A88296F68810011A4DE /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 				828F1A92296F68A20011A4DE /* DataModel.swift in Sources */,
 				828F1A97297010140011A4DE /* Extention+ UIImageView.swift in Sources */,
 				828F1A7E296F687F0011A4DE /* AppDelegate.swift in Sources */,
+				829E0125298A4F4000848F7C /* ImagePropertyWrapper.swift in Sources */,
 				828F1A9F297570060011A4DE /* ViewModel.swift in Sources */,
 				828F1A80296F687F0011A4DE /* SceneDelegate.swift in Sources */,
 			);
