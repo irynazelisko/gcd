@@ -7,13 +7,12 @@
 
 import UIKit
 
-
  @propertyWrapper
 struct ImagePropertyWrapper {
     private let minHeight: CGFloat = 50
     private let maxHeight: CGFloat = 350
     
-     
+
     var wrappedValue: CGFloat {
         didSet{
             if wrappedValue < minHeight {

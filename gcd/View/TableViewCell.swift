@@ -8,7 +8,7 @@
 import UIKit
 
 final class TableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
@@ -17,10 +17,8 @@ final class TableViewCell: UITableViewCell {
             setUpUI()
         }
     }
-   
-    var wrapper = ImagePropertyWrapper(wrappedValue: 250)
-   
     
+    var wrapper = ImagePropertyWrapper(wrappedValue: 250)
     
     func setUpUI() {
         viewModel?.loadImage { [weak self] image in
@@ -28,24 +26,17 @@ final class TableViewCell: UITableViewCell {
                 guard let self = self else{ return }
                 self.imgView.image = image
                 self.imgView.sizeToFit()
+                self.wrapper.wrappedValue = self.imgView.frame.height
                 self.heightConstraint.constant = self.wrapper.wrappedValue
-//                self.heightConstraint.constant = self.imgView.frame.height
             }
         }
     }
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-       
-    }
- 
     override func prepareForReuse() {
         super.prepareForReuse()
         imgView.image = nil
     }
     
-  
 }
 
 
