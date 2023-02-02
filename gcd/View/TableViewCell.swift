@@ -18,6 +18,9 @@ final class TableViewCell: UITableViewCell {
         }
     }
    
+    var wrapper = ImagePropertyWrapper(wrappedValue: 250)
+   
+    
     
     func setUpUI() {
         viewModel?.loadImage { [weak self] image in
@@ -25,7 +28,8 @@ final class TableViewCell: UITableViewCell {
                 guard let self = self else{ return }
                 self.imgView.image = image
                 self.imgView.sizeToFit()
-                self.heightConstraint.constant = self.imgView.frame.height
+                self.heightConstraint.constant = self.wrapper.wrappedValue
+//                self.heightConstraint.constant = self.imgView.frame.height
             }
         }
     }
